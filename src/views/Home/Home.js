@@ -1,13 +1,17 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import {Jumbotron, Button} from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.css'
-import NavbarComponent from './NavbarComponent';
+//import NavbarComponent from './NavbarComponent';
+import MainNavbar from './superNav';
+//import MainApp from '../../components/MainApp/mainApp';
 
 
 function Home(){
     return(
-        <div>
-            <NavbarComponent />
+      <div>
+            <MainNavbar />
+            <div>
             <Jumbotron>
         <h1>Welcome!</h1>
         <p>This app demonstrates how to add authentication to a React app. More specifically, it covers how to:</p>
@@ -27,6 +31,8 @@ function Home(){
         
       </Jumbotron>
         </div>
+      </div>
+       
     )
 }
 
