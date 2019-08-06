@@ -12,6 +12,7 @@ class Sidebar extends React.Component{
     render(){
         return(
             <div>
+                
                 <div className="bg-light border-right" id="sidebar-wrapper">
                 <div className="sidebar-heading">
                     <Link to="/" className="navbar-brand">PMS</Link> 
@@ -30,8 +31,9 @@ class Sidebar extends React.Component{
                 <Link to="/" className="list-group-item list-group-item-action bg-light">
                 Project Status</Link>    
                 </div>
+                </div>
             </div>
-            </div>
+        
         )
     }
 }
