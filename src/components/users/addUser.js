@@ -43,7 +43,7 @@ class Adduser extends React.Component{
 
     onChangeAssign_to = (e) =>{
         this.setState({
-            email: e.target.value
+            assign_to: e.target.value
         });
     }
 
@@ -72,7 +72,7 @@ class Adduser extends React.Component{
             <div>
                <Navbar/> 
                 <div className="container">
-                <h3>Create Exercise</h3>
+                <h3>Create User Account</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                        <label>UserName</label>
@@ -99,8 +99,8 @@ class Adduser extends React.Component{
                         onChange = {this.onChangeEmail} />   
                     </div>
                     <div className="form-group">
-                       <label>Assgn To</label>
-                       <input type="text" 
+                       <label>Assign Supervisor</label>
+                        <input type="text" 
                         required
                         className="form-control"
                         value={this.state.assign_to}
