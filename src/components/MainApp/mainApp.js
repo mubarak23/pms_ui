@@ -19,11 +19,8 @@ class MainApp extends React.Component{
                     <br/>
                     <div className="container">
                    <div className="row">
-                       <div className="col-md-4">
-                       <SideBar/>
-                       </div>
                        <div className="col-md-8">
-                       <h2>This is the main App</h2>
+                       <h2>This section will show the summary of all activities on the platform </h2>
                        </div>
                    </div>
                </div>

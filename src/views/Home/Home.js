@@ -17,11 +17,10 @@ function Home(){
         <p>This app demonstrates how to add authentication to a React app. More specifically, it covers how to:</p>
         <ul>
           <li>Add a login/signup area which returns a <a href="https://jwt.io/introduction">JSON Web Token</a> that is saved in <code>localStorage</code></li>
-          <li>Conditionally hide and show various parts of the application depending on the user's authentication state</li>
-          <li>Create a profile area which displays user information from the payload of the JWT</li>
-          <li>Protect client-side routes with the <code>onEnter</code> route event</li>
-          <li>Make requests for server resources protected by JWT middleware on the server</li>
-          <li>Make requests for server resources that require a specific <code>scope</code> to be present in the JWT payload</li>
+          <li>Given the difficulty associated with tracking student project on campus,
+             I was challenge to build a single page application that allow student and 
+             supervisors interact and track project progress, the system is built with node/express.js 
+            at the backend and react.js at the front end. <code>onEnter</code> route event</li>
         </ul>
        
             <Button ClassName="btn btn-primary" bsSize="large">Log In</Button>

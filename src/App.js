@@ -10,6 +10,7 @@ import Meetings from './components/meetings/meetings'
 import AddMeeting from './components/meetings/addMeeting';
 import Projects from './components/projects/projects';
 import AddProject from './components/projects/addProject';
+import AddUser from './components/users/addUser';
 import MainApp from './components/MainApp/mainApp';
 //import Home from './views/Home/Home';
 
@@ -23,7 +24,7 @@ function App() {
                 <Route path="/addmeeting" exact component={AddMeeting}/>
                 <Route path="/projects" exact component={Projects}/>
                 <Route path="/addproject" exact component={AddProject}/>
-                
+                <Route path="/adduser" exact component ={AddUser}/>
     </Router>
     </div>
   );
