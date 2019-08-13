@@ -7,11 +7,12 @@ class Adduser extends React.Component{
         super(props);
 
         //binding
-        this.onchangeUsername = this.onchangeUsername.bind(this);
-        this.onchangePassword = this.onchangePassword.bind(this);
-        this.onchangeEmail = this.onchangeEmail.bind(this);
-        this.onchageAssign_to = this.onchageAssign_to.bind(this);
-        this.onchangeReg_no = this.onchangeReg_no.bind(this);
+        this.onChangeUsername = this.onChangeUsername.bind(this);
+        this.onChangePassword = this.onChangePassword.bind(this);
+        this.onChangeEmail = this.onChangeEmail.bind(this);
+        this.onChangeAssign_to = this.onChangeAssign_to.bind(this);
+        this.onChangeReg_no = this.onChangeReg_no.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             username: '',
@@ -23,30 +24,30 @@ class Adduser extends React.Component{
         }
     }
 
-    onchangeUsername = (e) =>{
+    onChangeUsername = (e) =>{
         this.setState({
             username: e.target.value
         });
     }
 
-    onchangePassword = (e) =>{
+    onChangePassword = (e) =>{
         this.setState({
             password: e.target.value
         });
     }
-    onchangeEmail = (e) =>{
+    onChangeEmail = (e) =>{
         this.setState({
             email: e.target.value
         });
     }
 
-    onchageAssign_to = (e) =>{
+    onChangeAssign_to = (e) =>{
         this.setState({
             email: e.target.value
         });
     }
 
-    onchangeReg_no = (e) =>{
+    onChangeReg_no = (e) =>{
         this.setState({
             reg_no: e.target.value
         });
@@ -70,7 +71,58 @@ class Adduser extends React.Component{
         return(
             <div>
                <Navbar/> 
-                Component that us add user to the system
+                <div className="container">
+                <h3>Create Exercise</h3>
+                <form onSubmit={this.onSubmit}>
+                    <div className="form-group">
+                       <label>UserName</label>
+                       <input type="text" 
+                        required
+                        className="form-control"
+                        value={this.state.username}
+                        onChange = {this.onChangeUsername} />
+                    </div>
+                    <div className="form-group">
+                       <label>Password</label>
+                        <input type="password" 
+                        required
+                        className="form-control"
+                        value={this.state.password}
+                        onChange = {this.onChangePassword} />   
+                    </div>
+                    <div className="form-group">
+                       <label>Email Address</label>
+                        <input type="text" 
+                        required
+                        className="form-control"
+                        value={this.state.email}
+                        onChange = {this.onChangeEmail} />   
+                    </div>
+                    <div className="form-group">
+                       <label>Assgn To</label>
+                       <input type="text" 
+                        required
+                        className="form-control"
+                        value={this.state.assign_to}
+                        onChange = {this.onChangeAssign_to} />   
+                    </div>
+                    <div className="form-group">
+                       <label>Registration Number</label>
+                       <input type="text" 
+                        required
+                        className="form-control"
+                        value={this.state.reg_no}
+                        onChange = {this.onChangeReg_no} />   
+                    </div>
+                    <div className="form-group">
+                        <input type="submit" 
+                        required
+                        className="btn btn-primary"
+                        value="Create User"
+                         />   
+                    </div>
+                </form>
+                </div>
             </div>
         )
     }
