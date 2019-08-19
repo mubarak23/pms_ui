@@ -1,14 +1,22 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import TimePicker from 'react-time-picker'
 import Navbar from "../../../src/views/Home/superNav";
 
 class AddMeeting extends React.Component{
     constructor(props){
+        //bind change handlers
+        this.onChangeDate = this.onChangeDate.bind(this);
+        this.onChangeLocation = this.onChangeLocation.bind(this);
+        this.onChangeTime = this.onChangeTime.bind(this);
+        this.onChangeWithStudent = this.onChangeWithStudent.bind(this);
+        this.onSubmit = this.onChangeWithStudent.bind(this);
+        this.onChangeCreateBy = this.onChangeCreateBy.bind(this);
         super(props);
         this.state = {
-            date: '',
+            date: new Date(),
             time: '',
             location: '',
             with_student: '',
@@ -19,19 +27,19 @@ class AddMeeting extends React.Component{
 
     componentDidMount(){
         this.setState({
-            users : ['Mubarak Aminu'],
-            username : ['Mubarak Aminu'],
+            users : ['Mubarak Aminu', 'Nana Fatimah'],
+            username : ['Mubarak Aminu', 'Nana Fatimah'],
         })
     }
 
-    onChangeDate = (e) =>{
+    onChangeDate =(date) =>{
         this.setState({
-            date: e.target.value
+            date: date
         });
     }
-    onChangeTime = () =>{
+    onChangeTime = (time) =>{
         this.setState({
-            time: e.target.value
+            time: time
         });
     }
     onChangeLocation = (e) =>{
@@ -83,13 +91,12 @@ class AddMeeting extends React.Component{
                     </div>
                     <div className="form-group">
                        <label>Date</label>
-                        <div>
+                       <div>
                         <DatePicker 
                         selected={this.state.date}
-                        onChange={this.onChangeDate}/>
-                        </div>   
+                        onChange={this.onChangeDate} /> 
+                        </div>  
                     </div>
-                    
                     <div className="form-group">
                        <label>Date</label>
                         <div>
@@ -121,7 +128,7 @@ class AddMeeting extends React.Component{
                         value="Create Meeting Schedule"
                          />   
                     </div>
-                </form>
+                    </form>
                 </div>
             </div>
         )
